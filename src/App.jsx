@@ -1,9 +1,10 @@
-import Webpages from "./webpages";
+import Pages from "./pages";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <div>
-      <Webpages />
+      <Pages />
     </div>
   );
 }
