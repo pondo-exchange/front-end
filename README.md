@@ -1,6 +1,6 @@
-Available routes:
-/
-/instrument-view
-/profile
-/tournament-view
+Available routes:\
+/\
+/instrument-view\
+/profile\
+/tournament-view\
 /tournaments-list
