@@ -32,7 +32,7 @@ function Instrument(props) {
                 <Card.Body>
                     <Card.Title>{props.instrument.name}</Card.Title>
                     <Card.Text>{props.instrument.description}</Card.Text>
-                    <Button variant="primary" href={props.instrument.link}>Go somewhere</Button>
+                    <Button variant="primary" href={props.instrument.link}>View Instrument</Button>
                 </Card.Body>
             </Card>
         </div>

@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Home from "./home/home";
 import Profile from "./profile/profile";
-import InstrumentView from "./instrument view/instrument_view";
-import TournamentView from "./tournament view/tournament_view";
-import TournamentsList from "./tournaments list/tournaments_list";
+import InstrumentView from "./instrument_view/instrument_view";
+import TournamentView from "./tournament_view/tournament_view";
+import TournamentsList from "./tournaments_list/tournaments_list";
+import Register from "./register/register";
 
 function Webpages() {
     return (
@@ -15,6 +16,7 @@ function Webpages() {
                 <Route path="/instrument-view" element={<InstrumentView />} />
                 <Route path="/tournament-view" element={<TournamentView />} />
                 <Route path="/tournaments-list" element={<TournamentsList />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </Router>
     );

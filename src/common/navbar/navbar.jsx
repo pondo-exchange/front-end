@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Navbar as BootstrapNavbar, Nav, Form, FormControl, Button, Container } from "react-bootstrap";
-import LoginDropdown from "../login dropdown/login_dropdown";
+import LoginDropdown from "../login_dropdown/login_dropdown";
 import "./navbar.css";
 
 function Navbar() {
