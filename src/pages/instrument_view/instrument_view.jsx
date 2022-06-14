@@ -10,5 +10,4 @@ function InstrumentView() {
         </div>
     )
 }
-
 export default InstrumentView;
