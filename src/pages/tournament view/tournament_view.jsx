@@ -1,7 +1,11 @@
+import Navbar from "../../common/navbar/navbar";
+import InstrumentCarousel from "./instrument carousel/instrument_carousel";
+
 function TournamentView() {
     return (
         <div>
-            Pretty tournament view
+            <Navbar />
+            <InstrumentCarousel />
         </div>
     );
 }
