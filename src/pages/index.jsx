@@ -6,6 +6,7 @@ import InstrumentView from "./instrument_view/instrument_view";
 import TournamentView from "./tournament_view/tournament_view";
 import TournamentsList from "./tournaments_list/tournaments_list";
 import Register from "./register/register";
+import Problems from "./problems/problems";
 
 function Webpages() {
     return (
@@ -17,6 +18,7 @@ function Webpages() {
                 <Route path="/tournament-view" element={<TournamentView />} />
                 <Route path="/tournaments-list" element={<TournamentsList />} />
                 <Route path="/register" element={<Register />} />
+                <Route path="/problems" element={<Problems />} />
             </Routes>
         </Router>
     );

@@ -16,7 +16,7 @@ function UserStats() {
             "recentTrades": []
         }
     ]
-
+    
     const [currInstrument, setCurrInstrument] = useState(instruments[0]);
 
     return (
@@ -37,28 +37,24 @@ function InstrumentInfo(props) {
         <Container>
             <Row>
                 <Col>
+                    <h2>Position</h2>
                     {props.currInstrument.position}
                 </Col>
                 <Col>
+                    <h2>Profit</h2>
                     {props.currInstrument.profit}
                 </Col>
             </Row>
             <Row>
                 <Col>
+                    <h2>Recent Trades</h2>
                     {props.currInstrument.recentTrades.map(
-                        (trade) => (<Trade trade={trade} />)
+                        (trade) => (<div>{trade}</div>)
                     )}
                 </Col>
             </Row>
         </Container>
     )
 }
-
-function Trade(props) {
-    return (
-        <h2>{props.trade}</h2>
-    )
-}
-
 
 export default UserStats;
