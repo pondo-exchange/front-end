@@ -5,21 +5,21 @@ function UserStats() {
     const instruments = [
         {
             "name": "Instrument 1",
-            "position": "",
-            "profit": "",
+            "position": "300",
+            "profit": "200",
             "recentTrades": ["BUY", "SELL"]
         },
         {
             "name": "Instrument 2",
-            "position": "",
-            "profit": "",
+            "position": "100",
+            "profit": "200",
             "recentTrades": []
         }
     ]
 
     const [currInstrument, setCurrInstrument] = useState(instruments[0]);
 
-    return ( // TODO: Handle onClick when dropdown item is clicked
+    return (
         <div>
             <h2>Your Stats</h2>
             <DropdownButton id="dropdown-basic-button" title={currInstrument.name}>
