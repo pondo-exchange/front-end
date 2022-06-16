@@ -1,6 +1,5 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
-import { Paper, Button as Btn } from '@mui/material'
 import { Card, Button } from "react-bootstrap";
 
 function InstrumentCarousel() {

@@ -1,15 +1,36 @@
 import { React, useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
+import axios from "../../api/axios";
 
 function Register() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [success, setSuccess] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
-    function handleSubmit(e) {
-        console.log(username, password);
+    const REGISTER_URL = "/register";
 
-        // API call here or something
+    async function handleSubmit(e) {
         e.preventDefault();
+
+        try {
+            const response = await axios.post(
+                REGISTER_URL,
+                JSON.stringify( { user: { username, password }} ),
+                { headers: { "Content-Type": "application/json" } }
+            );
+            setSuccess(true);
+            setUsername("");
+            setPassword("");
+        }
+        catch (error) {
+            if (!error?.response) {
+                setErrorMessage("No server response.");
+            }
+            else {
+                setErrorMessage("Registration failed.");
+            }
+        }
     }
 
     return (
@@ -27,7 +48,7 @@ function Register() {
                     aria-label="Password"
                     onChange={(e) => setPassword(e.target.value)}
                 />
-                <Button type="submit">Login</Button>
+                <Button type="submit">Register</Button>
             </Form>
         </div>
     )

@@ -5,4 +5,4 @@ Available routes:\
 /profile\
 /register\
 /tournament-view\
-/tournaments-list\
+/tournaments-list
