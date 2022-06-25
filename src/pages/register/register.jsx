@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Form, FormControl, Button } from "react-bootstrap";
+import Navbar from "../../common/navbar/navbar";
 import axios from "../../api/axios";
 
 function Register() {
@@ -35,6 +36,7 @@ function Register() {
 
     return (
         <div>
+            <Navbar showLoginRegister={false} />
             <Form onSubmit={handleSubmit}>
                 <FormControl
                     type="text"

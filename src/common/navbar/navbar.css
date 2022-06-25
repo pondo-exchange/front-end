@@ -1,3 +1,7 @@
 .color-nav {
-    background-color: #BD8BDD !important;
+    background-color: #333333 !important;
+}
+
+.navbar-text {
+    color: #FFFFFF !important;
 }
