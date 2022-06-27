@@ -38,11 +38,13 @@ function InstrumentTable() {
         }
     }
 
-    async function renderData(data, setter) {
+    function renderData(data, setter) {
         const render = [];
-        console.log(data[1])
+        if (data.length === 0) {
+            return;
+        }
         for (const ask of data[1]) {  // Asks
-            await render.push((
+            render.push((
                 <tr>
                     <td></td>
                     <td>{ask["price"]}</td>
@@ -52,7 +54,7 @@ function InstrumentTable() {
             ));
         }
         for (const bid of data[0]) {  // Bids
-            await render.push((
+            render.push((
                 <tr>
                     <td>{bid["volume"]}</td>
                     <td>{bid["price"]}</td>
@@ -66,9 +68,12 @@ function InstrumentTable() {
 
     useEffect(() => {
         getData();
-        // let a = async () => (renderData(tableData, setRenderTable));
-        // let b = async () => (renderData(userData, setRenderUser));
     }, []);
+
+    useEffect(() => {
+        renderData(tableData, setRenderTable);
+        renderData(userData, setRenderUser);
+    }, [tableData, userData]);
 
     return (
         <div>
