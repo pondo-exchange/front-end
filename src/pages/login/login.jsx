@@ -21,9 +21,8 @@ function Login() {
                 { headers: { "Content-Type": "application/json" } }
             );
             console.log(response.data);
+            window.localStorage.setItem("bearer-token", response.data);
             setSuccess(true);
-            setUsername("");
-            setPassword("");
         }
         catch (error) {
             if (!error?.response) {
@@ -53,9 +52,9 @@ function Login() {
                 />
                 <Button type="submit">Login</Button>
             </Form>
+            <Button href="/register">Don't have an account? Register here!</Button>
         </div>
     )
 }
-
 
 export default Login;

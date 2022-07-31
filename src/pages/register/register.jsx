@@ -21,8 +21,6 @@ function Register() {
                 { headers: { "Content-Type": "application/json" } }
             );
             setSuccess(true);
-            setUsername("");
-            setPassword("");
         }
         catch (error) {
             if (!error?.response) {
@@ -31,6 +29,7 @@ function Register() {
             else {
                 setErrorMessage("Registration failed.");
             }
+            console.log(error.response.data);
         }
     }
 
@@ -52,6 +51,7 @@ function Register() {
                 />
                 <Button type="submit">Register</Button>
             </Form>
+            <Button href="/login">Already have an account? Login here!</Button>
         </div>
     )
 }

@@ -12,11 +12,10 @@ function InstrumentTable() {
 
     const location = useLocation().pathname.split("/").slice(1, 4).join("/");
 
-
     async function getData() {
         try {
             const api = location;
-            const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpzbGV3IiwiaWF0IjoxNjU1NzM0MTkxfQ.SL-iKJoL0KkO6onN0uTn5nKDS-6t6om5yY7iqM85cSY";
+            const token = window.localStorage.getItem("bearer-token");
             const response = await axios.get(api, { headers: { "Authorization": `Bearer ${token}` } });
             const data = response.data;
             for (const array in data) {
